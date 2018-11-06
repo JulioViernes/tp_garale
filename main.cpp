@@ -1,38 +1,45 @@
 #include <iostream>
-#include "estructura.h"
 
 using namespace std;
 
-
 int main()
 {
-int opcion;
-    cout<<"================================================."<< endl;
-    cout<<"Ingrese la opcion deseada."<< endl;
-    cout<<"Ingrese 1 para ingresar un vehículo."<< endl;
-    cout<<"Ingrese 2 para la salida de un vehículo."<< endl;
-    cout<<"Ingrese 3 para mover un vehículo."<< endl;
-    cout<<"Ingrese 4 para liberar cochera fija"<< endl;
-    cout<<"Ingrese 5 para obtener un listado de Deudores."<< endl;
-    cout<<"Ingrese 6 para obtener cobranzas mensuales."<< endl;
-    cout<<"================================================."<< endl;
-    cin>>opcion;
+    cout << "Menu de inicio:" << endl;
+    cout << "1-  " << endl;
+    cout << "2" << endl;
+    cout << "3" << endl;
+    cout << "4" << endl;
+    cout << "5" << endl;
+    cout << "6" << endl;
 
-    switch(opcion){
-        case 1:ingreseAutomovil();
-        break;
-        case 2:salidaDeUnAutomovil();
-        break;
-        case 3:moverAutomovilDeCochera();
-        break;
-        case 4:liberarCocheraFija();
-        break;
-        case 5:listadoDeDeudores();
-        break;
-        case 6:cobranzasMensuales();
-        break;
-        case defaul:
+    st_err ingresaUnAutomovil(st_automovil automovil[], st_duenio duenio[], int tipoAlquiler, int fecha, int hora){
+
+    cout << "Ingrese automovil" << endl;
+    string mensajesEntrada['automovil',' ]
+    for (i=0, i<automovil.size, i++) {
+
+    //cout << "Ingrese ",mensajesEntrada[i],": " << endl;
+    //    cin >>
+
+        if(automovil[i].isEmpty){
+            cout<<"Ingresar el tipo de alquiler:\n 1. Por hora\n2. Por dia.\n3. Mensual"<< endl; cin>>tipoAlquiler;
+            cout<<"Ingrese la patente"<<endl; cin>>automovil[i].patente;
+            cout<<"Ingrese tipo auto 1.Camioneta 2.Auto"<<endl; cin>>automovil[i].tipo;
+
+            if (variable == 3){
+                cout<<"Ingrese nombre"<<endl; cin >> duenio[i].nombre;
+                cout<<"Ingrese el apellido"<< endl; cin >> duenio[i].apellido;
+                cout<<"Ingrese el DNI"<< endl; cin>> duenio[i].dni;
+                cout<<"Ingrese n� de telefono"<< endl; cin>>duenio[i].telefono;
+                cout<<"Ingrese un correo electronico"<<endl; cin>> duenio[i].correo;
+            }
+        }
     }
+    cin >> automovil[]
+
+
+    }
+
 
     return 0;
 }
