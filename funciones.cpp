@@ -37,7 +37,7 @@ int ingresarAutomovilFijo (ST_AUTOMOVIL automovil[], ST_COCHERA cochera[],ST_DUE
 }
 
 
-int IngresarAutomovilMovil (ST_AUTOMOVIL automovil[], ST_COCHERA cochera[],int sizeDesde, int sizeHasta, int sizeString){
+int ingresarAutomovilMovil (ST_AUTOMOVIL automovil[], ST_COCHERA cochera[],int sizeDesde, int sizeHasta, int sizeString){
     int retorno=-1;
     for (int i=sizeDesde;i<sizeHasta;i++){
         if(cochera[i].isEmpty==1){
@@ -67,5 +67,25 @@ int iniciar_cochera (ST_COCHERA cochera[], int sizeHasta){
     }
     return retorno;
 }
+ /*int salidaVehiculoTemporario (ST_AUTOMOVIL autmovil[], ST_COCHERA cochera[], char patente[], int fechayHoraIngreso, int sizeHasta){
+    int retorno=-1;
+    int horaSalida, tiempo;
+    cout<<"Ingrese la fecha y hora de salida. Formato AAAAMMDDhhmm."<<endl;
+    cin>>horaSalida;
+    for(int i=0;i<sizeHasta;i++){
+        if(autmovil[i].patente==patente && cochera[i].isEmpty==0){
+            tiempo= horaSalida-fechayHoraIngreso;//hacer el calculo correctamente
+            cochera[i].isEmpty=1;
+        }
+    }
+    return retorno;
+ }*/
 
-
+int listarVehiculos (ST_AUTOMOVIL vehiculo[], int sizeHasta){
+    int retorno=-1;
+    for (int i=0;i<sizeHasta;i++){
+        if (vehiculo[i].isEmpty==0){
+            cout<<"patente"<<vehiculo[i].patente<<"tipo"<<vehiculo[i].tipo;
+        }
+    }
+}

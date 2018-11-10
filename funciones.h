@@ -46,7 +46,7 @@ int iniciar_cochera (ST_COCHERA cochera[], int sizeHasta);
 
 int ingresarAutomovilFijo (ST_AUTOMOVIL automovil[], ST_COCHERA cochera[],ST_DUENIO duenio[], int sizeHasta, int sizeString);
 
-int IngresarAutomovilMovil (ST_AUTOMOVIL automovil[], ST_COCHERA cochera[],int sizeDesde, int sizeHasta, int sizeString);
+int ingresarAutomovilMovil (ST_AUTOMOVIL automovil[], ST_COCHERA cochera[],int sizeDesde, int sizeHasta, int sizeString);
 
-
+//int salidaVehiculoTemporario (ST_AUTOMOVIL autmovil[], ST_COCHERA cochera[], int sizeHasta);
 #endif // FUNCIONES_H_INCLUDED
