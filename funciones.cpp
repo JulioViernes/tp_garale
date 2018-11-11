@@ -167,3 +167,66 @@ int calcularMeses (int ingreso, int salida){
     return Y-X;
 }
 
+void moverVehiculoDeCochera(int sizeDesde; int sizeHasta,int idCochera, int &newIdCochera){
+    elegirOpcion();
+    if (elegirOpcion == 1){
+        listarCocherasVaciasF();
+        cout <<"Cual es la cochera de origen: " <<endl;
+        cin>>idCochera;
+        cout <<"Elija la nueva cochera de destino: " <<endl;
+        cin>>newIdCochera;
+        for (int i = sizeDesde; i = sizeHasta; i ++){
+            if(cochera[newIdCochera].isEmpty == 1){
+                cochera[idCochera] = cochera[newIdCochera];
+                cochera[newIdCochera].isEmpty == 0;
+                cout <<"Su nueva cochera es <<cochera[newIdCochera]" <<endl;
+            }
+        }    
+     }
+    if (elegirOpcion == 2){
+        listarCocherasVaciasM();
+        cout <<"Cual es la cochera de origen: " <<endl;
+        cin>>idCochera;
+        cout <<"Elija la nueva cochera de destino: " <<endl;
+        cin>>newIdCochera;
+        for (int i = sizeDesde; i = sizeHasta; i ++){
+            if(cochera[newIdCochera].isEmpty == 1){
+                cochera[idCochera] = cochera[newIdCochera];
+                cochera[newIdCochera].isEmpty == 0;
+                cout <<"Su nueva cochera es <<cochera[newIdCochera]" <<endl;   
+            }
+        }    
+     }
+
+
+void elegirOpcion( int &opcion){
+    cout<<"Ingrese el número de la opción deseada: "<<endl;
+    cout<<"Ingrese 1 si desea mover un vehículo Fijo: "<<endl;
+    cout<<"Ingrese 2 si desea mover un vehículo movil: "<<endl;
+    cin>>opcion;
+}
+
+
+
+void listarCocherasVaciasF(int sizeHasta, int sizeDesde){
+    int cocheraVacFija[CANT_COCHFIJAS];
+    for (int i = sizeDesde; i = sizeHasta; i ++){
+        if(cochera[i].isEmpty == 1){
+            cocheraVacFija[i]=cochera[i].isEmpty;
+            cout<<"Las cocheras Fijas Vacías son: "<< cocheraVacFija[i] <<endl;
+        }
+    }
+
+}
+
+void listarCocherasVaciasM(int sizeHasta, int sizeDesde){
+    int cocheraVacMov[CANT_COCHMOV];
+    for (int i = sizeDesde; i = sizeHasta; i ++){
+        if(cochera[i].isEmpty == 1){
+            cocheraVacMov[i]=cochera[i].isEmpty;
+            cout<<"Las cocheras Moviles Vacías son: "<< cocheraVacMov[i] <<endl;
+        }
+    }
+
+}
+
