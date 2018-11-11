@@ -27,7 +27,14 @@ typedef struct automovil{
     int isEmpty;
 }ST_AUTOMOVIL;
 
-typedef struct precios{}ST_PRECIOS;
+typedef struct precios{
+    float precioAutoxHora = 50;
+    float precioCamixHora = 75;
+    float precioAutoxDia = 300;
+    float precioCamixDia = 400;
+    float precioAutoxMes = 2500;
+    float precioCamixMes = 4000;
+}ST_PRECIOS;
 
 typedef struct cochera{
     int id;
@@ -48,5 +55,13 @@ int ingresarAutomovilFijo (ST_AUTOMOVIL automovil[], ST_COCHERA cochera[],ST_DUE
 
 int ingresarAutomovilMovil (ST_AUTOMOVIL automovil[], ST_COCHERA cochera[],int sizeDesde, int sizeHasta, int sizeString);
 
-//int salidaVehiculoTemporario (ST_AUTOMOVIL autmovil[], ST_COCHERA cochera[], int sizeHasta);
+int listarVehiculos (ST_AUTOMOVIL vehiculo[], int sizeHasta);
+
+int calcularHoras(int ingreso, int salida);
+
+int salidaVehiculoTemporal (ST_AUTOMOVIL automovil[], ST_COCHERA cochera[],ST_PRECIOS valor,int tipo, char patente[], int fechayHoraIngreso, int sizeHasta);
+
+int calcularDias (int ingreso, int salida);
+
+int calcularMeses (int ingreso, int salida);
 #endif // FUNCIONES_H_INCLUDED
